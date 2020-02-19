@@ -1,0 +1,38 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="add_dep">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <td>Department</td>
+      <td><label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Username</td>
+      <td><label>
+        <input type="text" name="textfield3" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><label>
+        <input type="password" name="textfield4" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Contact</td>
+      <td><label>
+        <input type="text" name="textfield2" required pattern="[6789][0-9]{9}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Save" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

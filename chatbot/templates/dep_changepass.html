@@ -1,0 +1,38 @@
+{% extends 'dep_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="dep_change_password">
+  <table width="200" border="1" >
+    <tr>
+      <td>Username</td>
+      <td><label>
+        <input type="text" name="textfield" required />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Current password </td>
+      <td><label>
+        <input type="password" name="textfield2" required />
+      </label></td>
+    </tr>
+    <tr>
+      <td>New password </td>
+      <td><label>
+        <input type="password" name="textfield3" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Confirm password </td>
+      <td><label>
+        <input type="password" name="textfield4" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input name="Submit" type="submit" value="Submit" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

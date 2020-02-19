@@ -1,0 +1,32 @@
+{% extends 'dep_index.html' %}
+{% block body %}
+<form action="dep_edit_course" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="200" border="1">
+    <tr>
+      <td>Course</td>
+      <td><label>
+        <input type="text" name="textfield" value="{{v[1]}}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td><label>
+        <input type="text" name="textfield2" value="{{v[3]}}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Syllabus</td>
+      <td><label>
+        <input type="file" name="file" />
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Submit" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

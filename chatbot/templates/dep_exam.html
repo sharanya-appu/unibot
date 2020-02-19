@@ -1,0 +1,35 @@
+{% extends 'dep_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="dep_add_exam">
+  <table width="200" border="1">
+    <tr>
+      <th colspan="6">Exam details </th>
+    </tr>
+    <tr>
+      <th>No.</th>
+      <th>Exam</th>
+      <th>Course</th>
+      <th>Date</th>
+      <th>Time table </th>
+      <th>&nbsp;</th>
+    </tr>
+    {% for i in v%}
+    <tr>
+      <td>&nbsp;{{i[0]}}</td>
+      <td>{{i[1]}}</td>
+      <td>&nbsp;{{i[2]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td>&nbsp;{{i[4]}}</td>
+      <td><p><a href="dep_delete_exam?id={{i[0]}}">Delete</a></p></td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="6"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Add" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

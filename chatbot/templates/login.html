@@ -1,0 +1,26 @@
+{% extends 'index2.html' %}
+{% block body %}
+<form name="form1" method="post" action="/login_click">
+  <table width="200" border="0" id="customers">
+    <tr>
+      <td >Username</td>
+      <td><label>
+        <input type="text" name="textfield" required >
+      </label></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><label>
+        <input type="password" name="textfield2" required>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div align="center">
+          <input type="submit" name="Submit" value="login" />
+          </div>
+      </td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

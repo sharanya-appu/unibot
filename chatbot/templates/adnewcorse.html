@@ -1,0 +1,25 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1">
+    <tr>
+      <th colspan="5">New courses </th>
+    </tr>
+    <tr>
+      <th>Course</th>
+      <th>Duration</th>
+      <th>Syllabus</th>
+      <th>&nbsp;</th>
+    </tr>
+    {% for i in v%}
+    <tr>
+      <td>{{i[1]}}</td>
+      <td>&nbsp;{{i[2]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td><p><a href="/approve_course?id={{i[0]}}">Approve</a></p>
+          <p><a href="/reject_course?id={{i[0]}}">Reject</a></p></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+{% endblock %}

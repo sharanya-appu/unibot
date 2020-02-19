@@ -1,0 +1,28 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1">
+    <tr>
+      <th colspan="6">College details </th>
+    </tr>
+    <tr>
+      <th>College </th>
+      <th>Place</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Course</th>
+      <th>Fee</th>
+    </tr>
+    {% for i in v %}
+    <tr>
+      <td>{{i[0]}}&nbsp;</td>
+      <td>&nbsp;{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}&nbsp;</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}&nbsp;</td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+{% endblock %}

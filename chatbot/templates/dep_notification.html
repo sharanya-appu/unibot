@@ -1,0 +1,33 @@
+{% extends 'dep_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="dep_add_noti">
+  <table width="200" border="1">
+    <tr>
+      <th colspan="6">Notifications</th>
+    </tr>
+    <tr>
+      <th>No</th>
+      <th>Notification</th>
+      <th>Date</th>
+      <th>Course</th>
+      <th>&nbsp;</th>
+    </tr>
+    {% for i in v %}
+    <tr>
+      <td >{{i[0]}}</td>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td><p><a href="dep_delete_notification?id={{i[0]}}">Delete</a></p>      </td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="6"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Add" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
